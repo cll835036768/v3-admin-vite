@@ -1,15 +1,11 @@
 {
-  "name": "v3-admin-vite",
+  "name": "admin",
   "version": "4.4.0",
-  "description": "一个免费开源的中后台管理系统基础解决方案，基于 Vue3、TypeScript、Element Plus、Pinia 和 Vite 等主流技术",
+  "description": "后台管理系统",
   "author": {
-    "name": "pany",
-    "email": "939630029@qq.com",
-    "url": "https://github.com/pany-ang"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/un-pany/v3-admin-vite.git"
+    "name": "chululu",
+    "email": "83503568@qq.com",
+    "url": ""
   },
   "type": "module",
   "scripts": {
@@ -30,6 +26,7 @@
     "dayjs": "1.11.10",
     "element-plus": "2.6.2",
     "js-cookie": "3.0.5",
+    "js-md5": "^0.8.3",
     "lodash-es": "4.17.21",
     "mitt": "3.0.1",
     "normalize.css": "8.0.1",

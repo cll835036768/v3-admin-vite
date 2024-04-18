@@ -8,6 +8,10 @@ import { createSvgIconsPlugin } from "vite-plugin-svg-icons"
 import svgLoader from "vite-svg-loader"
 import UnoCSS from "unocss/vite"
 
+// const target = "https://shmisinfo.com/"; // 米仕生产环境
+const target = "http://129.28.14.6:8383/" // 米仕测试环境
+//const target = "http://192.168.2.58:8777/" // 开发环境
+
 /** 配置项文档：https://cn.vitejs.dev/config */
 export default ({ mode }: ConfigEnv): UserConfigExport => {
   const viteEnv = loadEnv(mode, process.cwd()) as ImportMetaEnv
@@ -25,7 +29,7 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
       /** 设置 host: true 才可以使用 Network 的形式，以 IP 访问项目 */
       host: true, // host: "0.0.0.0"
       /** 端口号 */
-      port: 3333,
+      port: 8080,
       /** 是否自动打开浏览器 */
       open: false,
       /** 跨域设置允许 */
@@ -34,8 +38,8 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
       strictPort: false,
       /** 接口代理 */
       proxy: {
-        "/api/v1": {
-          target: "https://mock.mengxuegu.com/mock/63218b5fb4c53348ed2bc212",
+        "/api/": {
+          target: target,
           ws: true,
           /** 是否允许跨域 */
           changeOrigin: true
